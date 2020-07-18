@@ -1,0 +1,25 @@
+Unsetting proxy in PC:
+
+1)Disable the proxy using settings for the network,PC
+
+2)Unset proxy also in browser
+
+
+
+Unsetting proxy in OS:
+
+1)
+    1. sudo gedit /etc/environment
+        http_proxy=""
+        https_proxy=""
+        ftp_proxy=""
+    2. sudo gedit /etc/apt/apt.conf
+        Acquire::http::proxy "";
+        Acquire::https::proxy "";
+        Acquire::ftp::proxy "";
+
+2) (if required) sudo gedit ~/.bashrc
+                (type the statement: unset {http,https,ftp}_proxy)
+
+
+

@@ -1,0 +1,22 @@
+Setting proxy in PC:
+
+1)Enable,set the proxy using settings for the network
+
+2)If required,set proxy also in browser
+
+Setting proxy in OS:
+
+1)
+    1.  sudo gedit /etc/environment
+        http_proxy="http://172.16.2.30:8080/"
+        https_proxy="https://172.16.2.30:8080/"
+        ftp_proxy="ftp://172.16.2.30:8080/"
+    2. sudo gedit /etc/apt/apt.conf
+        Acquire::http::proxy "http://172.16.2.30:8080/";
+        Acquire::https::proxy "https://172.16.2.30:8080/";
+        Acquire::ftp::proxy "ftp://172.16.2.30:8080/";
+
+2) sudo gedit ~/.bashrc
+    (remove the statement: unset {http,https,ftp}_proxy)
+
+

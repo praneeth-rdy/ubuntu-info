@@ -1,0 +1,5 @@
+
+
+******Installing grub customizer*******
+
+1) Use: ' sudo apt-get install grub-customizer '

@@ -1,0 +1,67 @@
+(((ubuntu focal-fossa)))
+
+****************************Installing gnome tweaks:*****************************
+
+*step1: ' sudo add-apt-repository universe '
+*step2: ' sudo apt install gnome-tweak-tool '
+
+*search for available gnome shell extensions: ' apt search gnome-shell-extension '
+
+*Install selected extensions: ' sudo apt install  <name ex:gnome-shell-extension-gsconnect> '
+
+Install all extensions: ' sudo apt install $(apt search gnome-shell-extension | grep ^gnome | cut -d / -f1) '
+
+*start the tweak tool: ' gnome-tweaks '
+
+*********************************************************************************************
+
+
+*********Installing macOS themes(icons+application+cursor themes) on focal-fossa*********
+(You should have gnome tweaks installed for that. Do install gnome tweaks using above procedure, it has many uses)
+
+1)Follow these - ' https://linuxconfig.org/how-to-install-macos-theme-on-ubuntu-20-04-focal-fossa-linux '
+
+**Default ubuntu theme for applications,cursor,icons,sound,shell is yaru**
+
+***2)To use custom shell themes in gnome tweaks,
+you need to install extensions and enable user themes in that.***
+
+**To restart gnome shell: press Alt+F2 then type 'r' and enter(This won't restart the PC)**
+
+
+
+
+******Installing the downloaded themes********(download from ' gnome-look.org ')
+
+*Shell themes or application themes*:
+After downloading and extracting-->
+    step1-use: ' mkdir ~/.themes ' (This is a system folder to install themes.
+    So, it won't be visible in the current working directory.
+    Not required if already exists)
+    step2-use: ' mv <name of extracted folder ex: Mojave-dark> ~/.themes/ '
+
+(You can also directly move/copy these folders using GUI to the locations which are hidden ex: ~/.themes/, ~/.icons/)
+
+*Icons*:
+After downloading and extracting-->
+(You can extract using this if tar file: ' tar xf Mojave-CT-Night-Mode.tar.xz ')
+    $ mkdir ~/.icons
+    $ mv Mojave-CT-Night-Mode ~/.icons/
+
+
+*Cursor*:
+similar to icons.
+ex:
+    $ unzip -qq macOS\ Cursor\ Set.zip
+    $ mv macOS\ Cursor\ Set ~/.icons/
+    (i.e. ' mv <extracted folder name which contains index.theme> ~/.icons/ ')
+    (Here, backward slashes are used when mentioning a directory which has spaces in it's name )
+    
+
+************************************************************************************************
+Preferred set of themes and icons:
+Applications: Mojave-dark
+Cursor: macOS Cursor set
+Icons: Mojave-CT-Night-Mode
+Shell: Mojave-dark
+
