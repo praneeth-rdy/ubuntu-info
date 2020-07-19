@@ -1,4 +1,4 @@
-*****Git commands*****
+*************************************Creating a local repo********************************
 
 
 1)Create a github repo(Empty or initialized) and copy the link by clicking on clone.
@@ -33,9 +33,57 @@ ORDER:
 1)Create empty folder>git init>add origin>pull the files from origin(sync)
 
 2)After making changes: Adding to index(once per newfile)>Commit changes>Push to central repo
+*********************************************************************************************
 
-***Cache your credentials***:
+************************Commands************************
+
+1) Create a new branch and checkout to it in a single command: ' git checkout -b <newbranchname> '
+
+**
+To resolve any bug or add a new feature, it is recommended to work on a new branch.
+Because the master branch is the representation of what's on production and 
+we shouldn't mess it up until we complete the project on the new branch.
+We should be careful while we commit something to the master branch.
+**
+
+2) To create a new branch - ' git branch <newbranchname> '
+
+3) To delete a branch - ' git branch -d <newbranchname> '
+If the branch is not fully merged, then it's going to give you a warning then replace '-d' in command with '-D'.
+
+**
+1) You cannot delete a branch while you are working on it.
+2) When you switch to another branch, any work(or modified but not committed work/files) 
+that we might have in the staging area, or the working directory will come over with us to the switched to branch.
+3) We can't switch to a new branch, if any of the files in the working directory or the staging would be overwritten.
+4) You may see files disappear or reappear when switching between branches. All these files will stay on their respective branches until you merge them.
+**
+
+4) 
+
+********************************************************
+
+
+****************Cache your credentials**********************
+
 (if git prompts you to enter your GitHub credentials every time you pull or push a repository, try caching the credentials.)
 
 command: ' git config --global credential.helper cache '
 
+************************************************************
+
+
+***************Working on branches**************************
+
+1) No branch(not even master) will be created immediately after using ' git init '.
+
+2) You need to add and commit something to create a master branch.
+
+3) Then try creating a new branch(say b1).
+
+4) Now creating a new file doesn't add it to any of the branches until you add them to index and commit to the newly created branch.
+i.e. Just created file will be untracked until you add and commit it. The commited file belongs to that git branch on which you are working when you (added and commited) that file.
+
+5) The files belonging to a particular branch will be visible (in the dir/repo either using UI or terminal) only when you switch to (or present on) that particular branch using git.
+
+************************************************************
