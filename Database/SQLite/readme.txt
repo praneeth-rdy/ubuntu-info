@@ -1,7 +1,11 @@
 
 This is a lightweight and serverless database. Can also be used for internal data storage in some applications.
 
-
+*******Info********
+* You can you use SQLite shell to access SQLite databases. Refer: https://sqlite.org/cli.html
+* Type 'sqlite3' or 'sqlite' on terminal to run the SQLite shell. After you see 'sqlite>' then you are on the sqlite shell.
+* You can run the SQLite supported SQL commands here after opening the database using '.open databasename'.
+***********************
 
 ********SQLite in python*********
 Refer:

@@ -1,3 +1,6 @@
+Special files of GitHub repos: CONTRIBUTING.md, LICENSE.md, README.md, CODE_OF_CONDUCT.md, CHANGELOG.md, SUPPORT.md, CONTRIBUTERS.md, AUTHORS.md, ACKNOWLEDGEMENTS.md, ISSUE_TEMPLATE.md, PULL_REQUEST_TEMPLATE.md, CODEOWNERS.md, etc.
+
+
 -----------Contributing to OpenSource using GitHub-----------
 
 1) Fork the repo that you want to contribute to.
