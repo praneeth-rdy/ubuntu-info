@@ -1,0 +1,76 @@
+We use JDBC driver here to connect to PostgreSQL database.
+
+
+
+
+1) The DB credentials are 
+host: ec2-35-174-127-63.compute-1.amazonaws.com
+Database: d7miljphoasshh
+User: pmskzvpprbisbq
+Port: 5432
+Password: 70297c51891e524cca5ae2ab3181983d18832ea1e150a1415c2a33dfa190087b
+
+
+*************
+file name: one.java
+postgresql java driver name: postgresql-42.2.15.jar
+***********
+Sample code 1: 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+
+public class one{
+
+    private final String url = "jdbc:postgresql://ec2-35-174-127-63.compute-1.amazonaws.com/d7miljphoasshh";
+    private final String user = "pmskzvpprbisbq";
+    private final String password = "70297c51891e524cca5ae2ab3181983d18832ea1e150a1415c2a33dfa190087b";
+
+    public Connection connect() {
+        Connection conn = null;
+        try {
+            conn = DriverManager.getConnection(url, user, password);
+            System.out.println("Connected to the PostgreSQL server successfully.");
+        } catch (SQLException e) {
+            System.out.println("Catched");
+            System.out.println(e.getMessage());
+        }
+
+        return conn;
+    }
+
+    public static void main(String[] args) {
+        one app = new one();
+        app.connect();
+    }
+}
+************
+Sample code 2:
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class one {
+   public static void main(String args[]) {
+      Connection c = null;
+      try {
+         Class.forName("org.postgresql.Driver");
+         c = DriverManager
+            .getConnection("jdbc:postgresql://ec2-35-174-127-63.compute-1.amazonaws.com/d7miljphoasshh",
+            "pmskzvpprbisbq", "70297c51891e524cca5ae2ab3181983d18832ea1e150a1415c2a33dfa190087b");
+      } catch (Exception e) {
+         e.printStackTrace();
+         System.err.println(e.getClass().getName()+": "+e.getMessage());
+         System.exit(0);
+      }
+      System.out.println("Opened database successfully");
+   }
+}
+***************
+
+Step1: Write the code of Java and compile it to a class file.
+Step2: Download Java Postgres driver(JDBC driver)(.jar file) and paste it in the same dir as the class file.
+Step3: Now run these both(class file and jar file) using 'java -cp .:./postgresql-42.2.15.jar ./one'
+
+Note: Learn the terms of DataBase hosting. Make the DB publicly available. url = "jdbc:postgresql://<host_name>/<db_name>", user = "<db_username>", password = "<db_password>"
+***************
