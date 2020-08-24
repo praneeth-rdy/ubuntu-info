@@ -33,3 +33,4 @@ or you can directly run studio.sh from /home/PC/android-studio/bin
 3) Android sdk location: ' /home/praneeth/Android/Sdk '
 
 4) Android ndk location: ' /home/praneeth/Android/Sdk/ndk-bundle ' (installed on july 15 2020)
+

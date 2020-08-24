@@ -1,3 +1,11 @@
+*** We need a server to host postgres DB.
+In any language, We use packages(actually drivers written in a required language) to access and manupulate the database at server.
+Ex: psycopg2 for postgres in Python, jdbc_driver.jar java archive file for postgres in Java, etc. There are many other packages and ways to do this.
+We use these because it's time consuming to code from scratch.
+A database engines is used at server to manupulate and host the database.
+Generally, we connect to this engine at the host adress(server) and give commands to access the database.
+
+
 
 Don't messup the server usernames, passwords and databases without knowing the consequence.
 
@@ -7,9 +15,11 @@ Don't messup the server usernames, passwords and databases without knowing the c
 
 3)Password for the username 'praneeth': praneeth19
 
-4)'PostgreSQL 11' server in group Servers is created using username postgres.
+4)'PostgreSQL 11' server in group Servers is created using username praneeth.
 
 5)Learn about tablespaces.
+
+6) Access pgadmin4 at 'http://127.0.0.1/pgadmin4/browser/'
 
 ***commands on normal terminal***
 

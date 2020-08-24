@@ -31,3 +31,8 @@ Enter: sudo update-alternatives --install /usr/bin/python python /usr/bin/<pytho
 **************OTHER*************
 1)Your terminal won't be opening if you have any issue with python or you have mistakenly deleted any python version.
 However, you can open terminal again from file explorer.
+
+2) Some python packages need to be installed using sudo apt install python3-<package name>
+ex: 1) sudo apt install python3-opencv
+    2) sudo apt install python3-tk
+    3) sudo apt install python3-pip
