@@ -16,3 +16,19 @@ Steps:
 4) Catch Exception if any that may occur during this process
 We mostly work with cursor objects when working with SQLite, PostgreSQL Databases.
 
+
+Sample Code:
+import psycopg2
+
+conn = psycopg2.connect(
+            database="d7miljphoasshh", 
+            user = "pmskzvpprbisbq", 
+            password = "70297c51891e524cca5ae2ab3181983d18832ea1e150a1415c2a33dfa190087b", 
+            host = "ec2-35-174-127-63.compute-1.amazonaws.com", 
+            port = "5432")
+c = conn.cursor()
+c.execute("SELECT * FROM users")
+print(c.fetchall())
+#conn.commit()
+conn.close()
+
