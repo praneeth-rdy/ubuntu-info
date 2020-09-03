@@ -1,3 +1,22 @@
+**************Configuring git lfs****************
+Git Large File Storage (LFS) replaces large files such as audio samples, videos, datasets, and graphics with text pointers inside Git,
+while storing the file contents on a remote server like GitHub.com or GitHub Enterprise
+Install:
+1) ' curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash '
+2) ' sudo apt-get install git-lfs '
+Configure large files on lfs:
+1) ' git lfs install '
+2) ' git lfs track "*.pdf" ' or use any other file extension
+3) ' git add .gitattributes '
+4) 
+' git add file.psd '
+' git commit -m "Add design file"'
+' git push origin master '
+*************************************************
+
+
+
+
 *************************************Creating a local repo********************************
 
 

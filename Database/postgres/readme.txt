@@ -29,6 +29,8 @@ Don't messup the server usernames, passwords and databases without knowing the c
 
 3)Use(on 'root@PC') : 'su - <username>' to switch users.
 
+4) Use either ' sudo service postgresql restart ' or ' sudo /etc/init.d/postgresql restart ' to restart postgresql service.
+
 
 ******commands on database shell******
 
@@ -49,7 +51,7 @@ command is : 'DROP DATABASE <database name>;' or
 command is : 'ALTER ROLE <username> WITH <options>;'
 
 5)Giving password to db user using db shell
-command is: "ALTER USER <username> PASSWORD '<password as string>';".
+command is: "ALTER USER <username> WITH PASSWORD '<password as string>';".
 
 6)A database is created using the following commands:
 commands: 'CREATE DATABASE <dbname>;'(This will create a DB with owner as current user)

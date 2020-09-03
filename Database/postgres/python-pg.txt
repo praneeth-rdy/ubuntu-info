@@ -1,3 +1,8 @@
+***In the package sqlite3, cursor.execute() returns again a cursor object on which we can directly call other methods.
+but in psycopg2, cursor.execute() returns a None object and we need to use the previous cursor object(on which we used cursor.execute()) to call any methods like fecthall()***
+
+
+
 We will use psycopg2 driver here.
 
 Arguments required to connect PostgreSQL database from python:
