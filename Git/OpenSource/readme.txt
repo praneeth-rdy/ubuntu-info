@@ -1,5 +1,18 @@
 Special files of GitHub repos: CONTRIBUTING.md, LICENSE.md, README.md, CODE_OF_CONDUCT.md, CHANGELOG.md, SUPPORT.md, CONTRIBUTERS.md, AUTHORS.md, ACKNOWLEDGEMENTS.md, ISSUE_TEMPLATE.md, PULL_REQUEST_TEMPLATE.md, CODEOWNERS.md, etc.
+Configuring a remote for fork: https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/configuring-a-remote-for-a-fork
 
+
+To update your fork on local repo(Assuming that you have cloned your forked repo):
+1) Add remote upstream of original repo which you have forked:
+'git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git'
+
+2) fetch from upstream: 'git fetch upstream'
+3) Checkout to the master branch 'git checkout master'
+4) merge the fetched data with current local repo master: 'git merge upstream/master'
+** or you can use 'git pull upstream master' instead of fetch and merge
+5) To update the central forked repo: 'git push'
+
+** To list current configured remote repositories: 'git remote -v'
 
 -----------Contributing to OpenSource using GitHub-----------
 
