@@ -22,7 +22,7 @@
 
 3) percentage of download, download speed and time left,etc --> palette entry3 --> #F1C544
 
-4) '~' symbol+current directory path + directories in ls command --> palette entry4 --> #DBC8C8
+4) '~' symbol+current directory path + directories in ls command --> palette entry4 --> #8C5858
 
 5) jpg/jpeg files --> palette entry5 --> #77F0DE
 

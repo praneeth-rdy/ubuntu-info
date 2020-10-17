@@ -1,0 +1,5 @@
+1) To install vim: ' sudo apt install vim '
+2) To open a file: ' vim <filename with extension> '
+3) Press 'esc' to exit edit mode and then type "':q' + enter".
+This will close the vim editor
+4) 
