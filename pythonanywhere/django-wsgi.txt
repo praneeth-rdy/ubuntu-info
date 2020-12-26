@@ -1,4 +1,9 @@
 # +++++++++++ DJANGO +++++++++++
+'''
+change the path variable and os.environ[...] variable while setting up
+'''
+
+
 # To use your own Django app use code like this:
 import os
 import sys
@@ -8,7 +13,7 @@ path = '/home/<username>/<base_dir>'
 if path not in sys.path:
     sys.path.append(path)
 
-os.environ['DJANGO_SETTINGS_MODULE'] = 'irc.settings'
+os.environ['DJANGO_SETTINGS_MODULE'] = '<project_dir>.settings'
 
 ## Uncomment the lines below depending on your Django version
 ###### then, for Django >=1.5:

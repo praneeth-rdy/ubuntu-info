@@ -1,0 +1,54 @@
+1) create a folder and type 'npm init' in that directory in terminal.
+Then enter all the details which initially should create a package.json typically as below:
+{
+  "name": "electron-tut2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "author": "Praneeth Reddy",
+  "license": "ISC"
+}
+
+
+2) Then enter "npm install electron --save-dev" to install npm as a devDependency
+which means we use it as a dependency during the development but no as a dependency during the production.
+Then the file package.json will be updated as:(add the start key in scripts manually) remember that scripts and devDependencies are added later
+
+3) Adding a start key in scripts
+
+{
+  "name": "electron-tut2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Praneeth Reddy",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^11.1.0"
+  }
+}
+
+
+3) Create a main js file, write your code in it also using path of index.html.
+
+4) Then type "npm start"
+This executes electron in this folder by executing the main js file
+
+
+
+Additional info:
+
+*******Processes:*********
+In electron, there will be a main process(which is the main node js code)
+and one or more renderer processes which are responsible to act on their corresponding browserwindows for UI.
+main process's console output will be displayed in the terminal where your running the electron app.
+renderer process's console output will be displayed in the app's console similar to web pages in chrome.
+
+A renderer/main process doesn't interefere with each other.
+
+A browser window can be created using renderer process(i.e. web js) too.
+
+To use electron.remote in your javascript of any BrowserWindow i.e. in renderer process, mention "enableRemoteModule: true," in webpreferences as param to BrowserWindow in main process.
