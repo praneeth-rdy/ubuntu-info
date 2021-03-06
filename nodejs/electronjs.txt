@@ -1,3 +1,6 @@
+** This is a framework
+
+
 1) create a folder and type 'npm init' in that directory in terminal.
 Then enter all the details which initially should create a package.json typically as below:
 {

@@ -1,1 +1,0 @@
-To solve this 'Waiting for another flutter command to release the startup lock...' on vscode when I run flutter doctor => I deleted the flutter/bin/cache/lockfile

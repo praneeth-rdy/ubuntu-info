@@ -13,8 +13,15 @@ Configure large files on lfs:
 ' git commit -m "Add design file"'
 ' git push origin master '
 *************************************************
+...........Using ssh keys............
+Read this to setup an ssh key in local:
+https://medium.com/make-school/a-noob-s-guide-f20b3db28011
 
-
+1) Generate ssh key in the local machine if doesn't exist (this key will generally be in ~/ssh/*.pub file)
+use 'ssh-keygen -t rsa -b 4096 -C "your_github_email@example.com"' to generate the public key.
+Press enter to use the default location and enter again if you don't want to set the passphrase.
+2) Copy the key from the .pub file and add it to the github account/repo of which you want to provide access to.
+3) Then whenever the repo or account is accessed with that ssh key, github recognises it and provides the access.
 
 
 *************************************Creating a local repo********************************

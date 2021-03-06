@@ -1,6 +1,6 @@
 nvm: nodejs version manager
 npm: nodejs package manager
-nodejs: JavaScript runtime environment which uses V8 Javascript engine
+nodejs: JavaScript RUNTIME ENVIRONMENT(NOT FRAMEWORK, NOT LIBRARY) which uses V8 Javascript engine
 
 
 ***************Installing nvm*********
