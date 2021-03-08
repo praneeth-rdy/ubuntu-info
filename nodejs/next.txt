@@ -1,0 +1,11 @@
+** This is a react framework for developing js applications
+1) Create a project dir and use "npm init" or "npm init -y" to create a package.json file in it
+2) Then install the required packages of next and react using "npm install next react react-dom" or "npm install next react react-dom --save"
+3) Now add these scripts to package.json file:
+"scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+},
+4) Then create a folder and a js file 'pages/index.js'
+5) Then use 'npm run dev'

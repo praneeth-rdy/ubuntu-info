@@ -44,7 +44,14 @@ $ nvm use 12.18.3
 1) to install packages using npm: "npm install <package-name>" or "npm install -g <package-name>" to install globally
 2) to install any package only for the development purposes: "npm install <package-name> --save-dev"
 
+** To use an existing js project use: 'npm install' to install dependencies from package.json and then 'npm run dev'
+In case of next applications add this to scripts of package.json
+"dev": "next dev",
+"build": "next build",
+"start": "next start"
 
+** use 'npx <package-name> <cmd-arguments>' to run node packages without installing them
+ex: 'npx next dev', 'npx create-react-app myapp'
 
 ***********Local*******************
 node version: 14.15.1
