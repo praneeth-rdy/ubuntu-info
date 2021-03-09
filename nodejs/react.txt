@@ -23,3 +23,6 @@ We suggest that you begin by typing:
 
   cd myapp
   npm start
+
+Read how to minify react components (js) in your client side web application
+https://gist.github.com/gaearon/42a2ffa41b8319948f9be4076286e1f3
