@@ -1,0 +1,64 @@
+** To create a react app you need nodejs installed in your machine
+** react is a LIBRARY and NOT A FRAMEWORK. react is used to build UI and can be integrated with many technologies and at any part of your application
+
+1) To create a react application: 'npx create-react-app <appname>'
+(create-react-app is a node package which can be installed globally but instead of installing it globally,
+using it with npx will help in using the latest version of create-react-app instead of always updating it manually)
+2) This will create the project dir with <appname> mentioned which contains all the necessary files.
+3) Now you can cd into that directory and run several commands:
+  npm start
+    Starts the development server.
+
+  npm run build
+    Bundles the app into static files for production.
+
+  npm test
+    Starts the test runner.
+
+  npm run eject
+    Removes this tool and copies build dependencies, configuration files
+    and scripts into the app directory. If you do this, you can’t go back!
+
+We suggest that you begin by typing:
+
+  cd myapp
+  npm start
+
+Read how to minify react components (js) in your client side web application
+https://gist.github.com/gaearon/42a2ffa41b8319948f9be4076286e1f3
+
+
+***********OR************
+1) Go to base dir where you want to create your project(dir) and enter in terminal: 'npm init react-app <app-name>'
+2) Now your react app is created. Do 'cd <app-name>' and then 'npm start' to run the application
+
+
+
+*** Now to deploy it on gh-pages
+1) 'npm install gh-pages --save-dev' to save it as a dev dependency
+2) Now in package.json add '"homepage": "<The github page where you want to deploy the code>"'
+3) Make sure that gh-pages package is added in devDependencies of the project's package.json.
+4) Now, add two scripts in package.json: '"predeploy": "npm run build"' and '"deploy": "gh-pages -d build"'
+5) Now configure this as a local git repo and make your required commits
+6) Now 'npm run deploy'
+7) Now 'git push -u origin master'
+Visit 'https://create-react-app.dev/docs/deployment/' for more info.
+
+
+** You can use JSX(JavaScript XML) which is similar to XML or html in frontend. 
+You can either use React library to create components like React.createElement() but JSX is recommended.
+Even if we aren't using React library in the code, we should import it because JSX translates to react elements which in-turn uses React library.
+
+JSX differences:
+Class -> className
+for -> htmlFor (similar to that of properties in conventional js)
+camelCase property naming convention
+onclick -> onClick
+tabindex -> tabIndex
+
+** Component props are immutable. To keep track of changing properties, use state. (see props vs state)
+use this.setState(newState) to change the state
+if you directly change state using this.state.params = new_params, then the state will be changed but won't be set to the UI(i.e. won't re-render)
+** use this.state only in constructor not in any other place. use this.setState() in every other places.
+** use callback functions if you want to perform certain operations after an async function executes.
+Example, setState method is async so if you want to print something after its execution then use a callback function which will be passed as an argument to setState.

@@ -113,3 +113,4 @@ i.e. Just created file will be untracked until you add and commit it. The commit
 5) The files belonging to a particular branch will be visible (in the dir/repo either using UI or terminal) only when you switch to (or present on) that particular branch using git.
 
 ************************************************************
+* Use 'git reset --soft HEAD~1' to undo the recent commit.
