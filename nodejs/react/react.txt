@@ -41,7 +41,7 @@ https://gist.github.com/gaearon/42a2ffa41b8319948f9be4076286e1f3
 4) Now, add two scripts in package.json: '"predeploy": "npm run build"' and '"deploy": "gh-pages -d build"'
 5) Now configure this as a local git repo and make your required commits
 6) Now 'npm run deploy'
-7) Now 'git push -u origin master'
+7) Now 'git push -u origin main'
 Visit 'https://create-react-app.dev/docs/deployment/' for more info.
 
 

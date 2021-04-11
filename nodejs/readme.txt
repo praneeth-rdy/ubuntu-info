@@ -38,6 +38,7 @@ $ nvm use 12.18.3
 
 3) To default one of the versions: "nvm alias default 12.18.3"
 
+*4) To update global packages npm install -g <package-name>
 
 
 ****************npm*************************
@@ -49,6 +50,8 @@ In case of next applications add this to scripts of package.json
 "dev": "next dev",
 "build": "next build",
 "start": "next start"
+
+** updating npm: npm install -g npm
 
 ** use 'npx <package-name> <cmd-arguments>' to run node packages without installing them
 ex: 'npx next dev', 'npx create-react-app myapp'
