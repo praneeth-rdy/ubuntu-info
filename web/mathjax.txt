@@ -1,0 +1,5 @@
+
+
+1) Include the mathjax script line from this website: https://www.mathjax.org/
+
+2) Now go to hostmath.com and copy the embed code from there and paste it in your html code.
