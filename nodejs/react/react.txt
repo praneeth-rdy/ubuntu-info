@@ -62,10 +62,3 @@ if you directly change state using this.state.params = new_params, then the stat
 ** use this.state only in constructor not in any other place. use this.setState() in every other places.
 ** use callback functions if you want to perform certain operations after an async function executes.
 Example, setState method is async so if you want to print something after its execution then use a callback function which will be passed as an argument to setState.
-
-
-
-** When you host a react application on github with react routing, 
-add the 404.html which is present in this base dir to the public folder of the project.
-So that, when there is a force reload on a certain path server returns this 404.html,
-which in turn, redirects to the necessary react route.
