@@ -114,3 +114,6 @@ i.e. Just created file will be untracked until you add and commit it. The commit
 
 ************************************************************
 * Use 'git reset --soft HEAD~1' to undo the recent commit.
+
+
+** Renaming master branch to main branch 'git branch -m master main'

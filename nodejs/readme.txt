@@ -40,10 +40,12 @@ $ nvm use 12.18.3
 
 *4) To update global packages npm install -g <package-name>
 
+5) use nodemon package to automatically restart the server whenever there's any change in the code
 
 ****************npm*************************
 1) to install packages using npm: "npm install <package-name>" or "npm install -g <package-name>" to install globally
 2) to install any package only for the development purposes: "npm install <package-name> --save-dev"
+3) use "npm init -y" to initialize the project in a directory
 
 ** To use an existing js project use: 'npm install' to install dependencies from package.json and then 'npm run dev'
 In case of next applications add this to scripts of package.json
@@ -59,3 +61,10 @@ ex: 'npx next dev', 'npx create-react-app myapp'
 ***********Local*******************
 node version: 14.15.1
 nodejs version: 10.19.0
+
+
+While we export functions in nodejs,
+module.exports will be exported.
+So either we can export default function by directly assigning it to module.exports
+or we can export using named exports by assigning the functions as methods of module.exports like module.exports.name = fn_name;
+** require() always reurns the value of module.exports or exports from the module asked

@@ -9,3 +9,8 @@
 },
 4) Then create a folder and a js file 'pages/index.js'
 5) Then use 'npm run dev'
+
+
+OR
+
+1) use npx create-next-app <appname>
