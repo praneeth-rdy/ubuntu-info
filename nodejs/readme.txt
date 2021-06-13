@@ -63,6 +63,11 @@ node version: 14.15.1
 nodejs version: 10.19.0
 
 
+*** To use the env files in backend (ex: expressjs),
+1) You need to install an additional dependency 'dotenv'
+2) Then configure as: require('dotenv').config({path: '<path-to-envfile>'})
+3) The above configuration should be done as early as possible in the main running code to make the process.env available for major chunk of code
+
 While we export functions in nodejs,
 module.exports will be exported.
 So either we can export default function by directly assigning it to module.exports

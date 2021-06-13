@@ -44,6 +44,17 @@ https://gist.github.com/gaearon/42a2ffa41b8319948f9be4076286e1f3
 7) Now 'git push -u origin main'
 Visit 'https://create-react-app.dev/docs/deployment/' for more info.
 
+*** using environment variables in react
+1) add a .env file to the base directory of react project
+2) add all the variable names to the .env file and start the names with 'REACT_APP_'
+3) Ex: REACT_APP_SERVER_URI=value
+4) Restart the react server and now you can use this value inside the react components as process.env.REACT_APP_SERVER_URI
+
+*** To use the env files in backend (ex: expressjs),
+1) You need to install an additional dependency 'dotenv'
+2) Then configure as: require('dotenv').config({path: '<path-to-envfile>'})
+3) The above configuration should be done as early as possible in the main running code to make the process.env available for major chunk of code
+
 
 ** You can use JSX(JavaScript XML) which is similar to XML or html in frontend. 
 You can either use React library to create components like React.createElement() but JSX is recommended.
