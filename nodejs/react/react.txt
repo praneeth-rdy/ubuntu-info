@@ -55,6 +55,11 @@ Visit 'https://create-react-app.dev/docs/deployment/' for more info.
 2) Then configure as: require('dotenv').config({path: '<path-to-envfile>'})
 3) The above configuration should be done as early as possible in the main running code to make the process.env available for major chunk of code
 
+** To use css modules in react:
+1) Create module with the name as name.module.css
+2) Import into the component using import Styles from 'path-to-name.module.css';
+3) Now, to apply the classes defined in the css module to a JSX component use className={Styles.cssClassName} and boom this will apply the css to the component with local scoping
+
 
 ** You can use JSX(JavaScript XML) which is similar to XML or html in frontend. 
 You can either use React library to create components like React.createElement() but JSX is recommended.
