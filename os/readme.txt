@@ -1,0 +1,2 @@
+** Assembly Language
+Assembly language is a low level language which is compiled into cpu-specific machine code using an assembler which is again specific to the cpu as each and every cpu has its own set of Instructions and opcodes
