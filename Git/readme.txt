@@ -117,3 +117,5 @@ i.e. Just created file will be untracked until you add and commit it. The commit
 
 
 ** Renaming master branch to main branch 'git branch -m master main'
+
+** Changing date of the last commit 'GIT_COMMITTER_DATE="Sat Jun 12 21:05:23 2021 +0530" git commit --amend --no-edit --date="Sat Jun 12 21:05:23 2021 +0530"'
