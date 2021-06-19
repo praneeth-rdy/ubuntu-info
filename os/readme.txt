@@ -1,6 +1,12 @@
 ** Assembly Language
 Assembly language is a low level language which is compiled into cpu-specific machine code using an assembler which is again specific to the cpu as each and every cpu has its own set of Instructions and opcodes
 
+** Hexadecimal numbers are indicated with a 0x in the beginning (prefix) and the binary with 0b in the beginning
+    - Writing in binary is highly error prone. So we use hexadecimal number system for representing assembly instructions.
+    - It provides more human friendly representation. It is much easier to express binary in hex (as hex is base-16 i.e. 2^4) than any other number system.
+    - It is less prone to errors for humans. It is the most precise.
+    - Each hexadecimal digit can be represented using four bits. A == decimal-10 == 1010
+
 ** Tools
 1) We will use QEMU as our OS emulator
 Installation: 

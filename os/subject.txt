@@ -1,0 +1,90 @@
+- When you turn on a computer, the first thing it does is looking for an OS.
+- How does it know where the beginning of the OS is located in memory?
+It looks for a path of the memory called the 'Boot Sector'. Boot Sector is the first sector of a bootable drive(usb, floppy drive, hdd, ssd, etc).
+In general a boot sector is recognised because it is 512 bytes long and ends with a hexadecimal number '55 aa'
+
+** Assembly
+    - Assembly code is executed line-by-line and some lines can have labels followed by a colon
+    - You can jump to a label by using a jmp instruction
+    - You can skip lines or make loops using this jmp instruction.
+    - 'jmp $' is used to jump to current memory address
+
+*Example of labels-
+1) A typical label
+label:
+    code
+    code
+    code
+    code
+anotherlabel:
+    code
+
+2) Skipping lines
+label:
+    code
+    code
+    jmp anotherlabel
+    code
+anotherlabel:
+    code
+
+3) Loops
+label:
+    code
+    code
+    jmp label
+    code
+anotherlabel:
+    code
+
+** Understand BIOS and UEFI. BIOS vs UEFI.
+BIOS: Basic Input/Output System
+It provides simple tools to interact with the computer 
+like display characters on the screen, input characters from the keyboard, Read from disc, etc
+
+
+- To enter a particular mode or state, some particular register should contain a specific value. Just like a switch on/off.
+
+* Example of printing
+Similarly with BIOS, to print a char: 
+1) we need to first switch to teletype mode: mov ah, 0x0e
+2) Print the character: mov al, 'A' (or) mov al, 65 (or) mov al, 0b01000001 (or) mov al, 0x41
+3) Call the BIOS Interrupt 0x10 using the 'int' instruction int 0x10
+
+Other Instructions
+- 'cmp val1, val2' to compare two values
+- 'inc reg1' to increment the value of a register
+- 'je labelname' this is condtional jump (jump-if-equal je) i.e. jump to a label/location based on the output of cmp instruction
+
+
+Reference: https://www.youtube.com/watch?v=7LTB4aLI7r0&list=PLxN4E629pPnKKqYsNVXpmCza8l0Jb6l8-
+****** Going Step-By-Step ******
+1) Create a boot loader
+2) Hello World
+3) Reading from the disk
+4) Mobing into 32-bit protected mode
+5) Entering 64-bit long mode
+6) GCC Cross Compiler and writing C Code
+7) Linker Script
+8) Set Cursor Position
+9) Print To Screen Text and Numbers
+10) Text Color & Clearing The Screen
+11) Include Binaries
+12) Keyboard Input & IDT
+13) Translating Keyboard Scancodes
+14) Special Scancodes
+15) Displaying Integers
+16) Floats and Doubles
+17) Memory Map - 1
+18) Memory Map - 2
+19) Headers & Cleaning Up
+20) Dynamic Memory - 1 (malloc)
+21) Dynamic Memory - 2 (malloc)
+22) Dynamic Memory - 3 (free)
+23) Dynamic Memory - 4 (calloc & memset)
+24) Dynamic Memory - 5 (realloc & memcpy)
+25) Dynamic Memory - 6 (aligned_alloc)
+26) Cmake
+
+** Compiling .asm boot loader using nasm: nasm -f bin boot.asm -o boot.bin
+** Running the binary on a virtual machine qemu: qemu-system-x86_64 boot.bin
