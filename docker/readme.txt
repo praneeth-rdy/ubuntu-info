@@ -54,3 +54,62 @@ Docker cli interacts with server (docker daemon or docker-d) through a rest api.
 8) 'docker run -it <image>:tag <command-to-run> <arguments(optional)>'
 (ex: docker run -it 4e5021d210f6 /bin/bash)(The -it instructs Docker to allocate a pseudo-TTY connected to the container's stdin; creating an interactive bash shell in the container.)
 9) 
+
+
+** Dockerfile
+- Dockerfile consists of comments and commands + arguments
+ex:
+# Print "Hello World"
+RUN echo "Hellp World"
+
+- FROM command is the most important command amongst all and it defines the base image to use to start the build process
+ex:
+# Usage: FROM [imagename]
+FROM ubuntu
+
+- RUN command is the central executing directive for Dockerfiles. It takes commands as its arguments and runs it to form the image. Unlike CMD, it actually is used to build the image.
+ex:
+# Usage: RUN [command]
+RUN apt-get install -y riak
+
+- CMD command is similar to RUN. Unlike RUN it is not executed during build, but when a container is instantiated using the image being built
+ex:
+# Usage 1: CMD application "argument1" "argument2"
+CMD "echo" "Welcome To Edureka"
+
+- ADD command gets two arguments: a source and a destination. It basically copies the files from the source on the host into the container's own filesystem at the set destination
+ex:
+# Usage: ADD [source directory or URL] [destination directory]
+ADD /my_app_folder /my_app_folder
+
+- ENV command is used to set the environment variables (one or more).
+These variables consist of "key value" pairs which can be accessed within the container by scripts and applications alike
+ex:
+# Usage: ENV key value
+ENV SERVER_WORKS 4
+
+- WORKDIR directive is used to set where the command defined with CMD is to be executed
+ex:
+# Usage: WORKDIR [path]
+WORKDIR /path WORKDIR ~/
+
+- EXPOSE command is used to associate a specified port to enable networking between the running process inside the container and the outside world i.e. the host
+ex:
+# Usage: EXPOSE [port]
+EXPOSE 8080
+
+- MAINTAINER command is used to set author field of an image
+ex:
+# Usage: MAINTAINER [name]
+MAINTAINER authors_name
+
+- USER directive is used to set the UID (or username) which is to run the container based on the image being built
+ex:
+# Usage: USER [UID]
+USER 751
+
+- VOLUME command is used to enable access from your container to a directory on the host machine (i.e. mounting it)
+ex:
+# Usage: VOLUME ["/dir_1", "/dir_2", ...]
+
+VOLUME [/"my_files"]
