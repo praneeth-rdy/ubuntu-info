@@ -73,3 +73,5 @@ module.exports will be exported.
 So either we can export default function by directly assigning it to module.exports
 or we can export using named exports by assigning the functions as methods of module.exports like module.exports.name = fn_name;
 ** require() always reurns the value of module.exports or exports from the module asked
+** To run any package with cli args, we can directly run npx <packagename> args
+ex: npx react-native start
