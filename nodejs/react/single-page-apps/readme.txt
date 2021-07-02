@@ -15,7 +15,7 @@ Refer to this url: https://github.com/rafgraph/spa-github-pages
 
 
 So to do this:
-1) Added the 404.html to the public folder of the app
+1) Add the 404.html to the public folder of the app
 2) Edit the index.html and add the required script
 
 And....Boom!!!!
