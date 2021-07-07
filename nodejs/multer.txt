@@ -1,0 +1,6 @@
+****** Middleware *******
+1) To accept a single file input: multer({ storage: storage }).single('htmlfileinputname')
+2) To accept multiple files from a single input tag: multer({ storage: storage }).array('multi-files')
+3) To accept multiple files from multiple input tags: multer({ storage: storage }).fields([{field: 'htmlfileinputname', maxCount: 1}, {field: 'htmlfileinputname', maxCount: 5}])
+4) To accept any number of files from any number of input tags: multer({ storage: storage }).any()
+
