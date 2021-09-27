@@ -25,3 +25,31 @@ You will get the data from that collection.
 
 
 Imagine collections as tables and documents as rows in the tables.
+
+
+**** Other Commands To Manage MongoDB ****
+1) Start MongoDB: 'sudo systemctl start mongod'
+run 'sudo systemctl daemon-reload' first, if you get Unit mongod.service not found.
+
+2) Verifying the mongoDB status: sudo systemctl status mongod
+
+* You can optionally ensure that MongoDB will start following a system reboot by issuing the following command: 'sudo systemctl enable mongod'
+
+3) To stop MongoDB: 'sudo systemctl stop mongod'
+
+4) To restart mongoDB: 'sudo systemctl restart mongod'
+
+5) To use mongoDB: 'mongosh'
+
+
+Uninstalling:
+
+1) sudo service mongod stop
+2) sudo apt-get purge mongodb-org*
+3) sudo rm -r /var/log/mongodb
+4) sudo rm -r /var/lib/mongodb
+
+
+By default, mongodb can only be accessed via localhost.
+If you want to make it remotely accessible, you should bind the IP using '--bind_ip'.
+* Read more here: https://docs.mongodb.com/manual/reference/program/mongod/#std-option-mongod.--bind_ip

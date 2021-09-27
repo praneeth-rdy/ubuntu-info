@@ -1,0 +1,1 @@
+'sudo ln -s /path/to/origin /path/to/doop' to create a simlink of origin at doop
