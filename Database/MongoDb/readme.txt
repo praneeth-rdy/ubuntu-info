@@ -53,3 +53,7 @@ Uninstalling:
 By default, mongodb can only be accessed via localhost.
 If you want to make it remotely accessible, you should bind the IP using '--bind_ip'.
 * Read more here: https://docs.mongodb.com/manual/reference/program/mongod/#std-option-mongod.--bind_ip
+
+
+To populate data into the db from a dump folder (Command to run on system shell):
+mongorestore -d db_name dump_folder_path

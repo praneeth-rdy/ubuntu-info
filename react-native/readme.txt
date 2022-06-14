@@ -45,3 +45,47 @@ fontFamily: 'Raleway-Bold'
 6) Refer to official reactnavigation.org documentation to implement navigation in your react project
 - @react-navigation/native
 - react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view
+
+
+
+************ Distribution ***********
+
+1) Generate a key using following command
+`keytool -genkey -v -keystore my-app-key.keystore -alias my-app-alias -keyalg RSA -keysize 2048 -validity 10000`
+
+2) Place the keystore in android/app
+
+3) Edit gradle.properties and add the following to the end of the file. (Replace ** with passwords)
+
+MYAPP_RELEASE_STORE_FILE=my-release-key.keystore
+MYAPP_RELEASE_KEY_ALIAS=my-key-alias
+MYAPP_RELEASE_STORE_PASSWORD=****
+MYAPP_RELEASE_KEY_PASSWORD=****
+
+4) Edit app/build.gradle
+
+...
+android {
+    ...
+    defaultConfig { ... }
+    signingConfigs {
+        release {
+            if (project.hasProperty('MYAPP_RELEASE_STORE_FILE')) {
+                storeFile file(MYAPP_RELEASE_STORE_FILE)
+                storePassword MYAPP_RELEASE_STORE_PASSWORD
+                keyAlias MYAPP_RELEASE_KEY_ALIAS
+                keyPassword MYAPP_RELEASE_KEY_PASSWORD
+            }
+        }
+    }
+    buildTypes {
+        release {
+            ...
+            signingConfig signingConfigs.release
+        }
+    }
+}
+...
+
+
+5) Now run: cd android && ./gradlew assembleRelease

@@ -1,0 +1,58 @@
+NAME:
+   expressvpn - ExpressVPN command line interface
+
+USAGE:
+   expressvpn command [arguments...]
+
+VERSION:
+   3.14.0.4-master - Release (b2f7af40)
+
+COMMANDS:
+   activate                   Activate account
+   connect                    Connect to VPN
+   disconnect                 Disconnect from VPN
+   status                     Display service information
+   list, ls                   List VPN locations
+   autoconnect                Enable / disable auto-connect
+   protocol                   Display / change preferred protocol
+   refresh                    Refresh VPN clusters
+   logout                     Logout ExpressVPN account
+   diagnostics                Display connection diagnostics
+   preferences                List user preferences
+   install-chrome-extension   Install ExpressVPN Chrome Extension
+   install-firefox-extension  Install ExpressVPN Firefox Extension
+   help, h                    Shows a list of commands or help for one command
+   
+GLOBAL OPTIONS:
+   --help, -h       show help
+   --version, -v    print the version
+
+NETWORK LOCK:
+
+   If your VPN connection unexpectedly drops, internet traffic will be blocked by Network Lock to protect your privacy.
+
+EXAMPLES:
+   To activate ExpressVPN account:
+      expressvpn activate
+
+   To connect to smart location or last connected location:
+      expressvpn connect
+
+   To connect to a country:
+      expressvpn connect "Germany"
+
+   To connect to a specific location:
+      expressvpn connect "Germany - Frankfurt - 1"
+
+   To check current connection status:
+      expressvpn status
+
+   To disable Network Lock:
+      expressvpn preferences set network_lock off
+
+FOR GRAPHICAL INTERFACE
+
+   Control ExpressVPN with our browser extension, which protects your whole device.
+
+   For Chrome, run “expressvpn install-chrome-extension”.
+   For Firefox, run “expressvpn install-firefox-extension”.
