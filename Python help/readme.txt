@@ -1,3 +1,6 @@
+
+** THIS IS SIMILAR TO THAT OF JAVA, except that python doesn't require any HOME variable to set and the python versions are installed at '/usr/bin/' mostly with the names following '/usr/bin/python*' **
+
 **********To change the default python version:
 
 1)first install the python version you want to update to
@@ -16,9 +19,9 @@ There are 3 choices for the alternative python (providing /usr/bin/python).
 
 Press <enter> to keep the current choice[*], or type selection number: 
 
-3)Then add the newly download python version to the alternatives, by adding highest priority number at the end.
+3)Then add the newly downloaded python version to the alternatives, by adding highest priority number at the end. higher the priority number => more the priority
 
-Enter: sudo update-alternatives --install /usr/bin/python python /usr/bin/<python version><space><priority number you want to give it>
+Enter: sudo update-alternatives --install /usr/bin/python python /usr/bin/<path-to-python> <priority number you want to give it>
 
 
 **********For any further assistance look at the screenshots**********

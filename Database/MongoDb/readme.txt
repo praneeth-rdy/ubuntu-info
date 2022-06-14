@@ -10,6 +10,12 @@ OR
 3) mongo // To open the shell
 4) // Now install the mongodb compass to use UI tool
 
+* You can optionally ensure that MongoDB will start following a system reboot by issuing the following command:
+sudo systemctl enable mongod
+
+The above command will output:
+Created symlink /etc/systemd/system/multi-user.target.wants/mongod.service → /lib/systemd/system/mongod.service.
+
 
 On mongodb shell:
 1) Use 'show dbs' to list info
@@ -57,3 +63,11 @@ If you want to make it remotely accessible, you should bind the IP using '--bind
 
 To populate data into the db from a dump folder (Command to run on system shell):
 mongorestore -d db_name dump_folder_path
+
+
+** If you've installed mongodb via the package manager, 
+the data directory /var/lib/mongodb and the log directory /var/log/mongodb are created during the installation.
+
+- Default user account - mongodb
+
+** The official mongodb package includes a configuration file at /etc/mongod.conf

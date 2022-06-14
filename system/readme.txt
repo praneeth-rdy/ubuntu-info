@@ -6,3 +6,6 @@ So, sometimes just creating new files in place would solve the issue.
 
 Desktop Entries:
 /usr/share/applications
+
+
+Use: sudo dpkg -i '<path-to-deb-file>' to install .deb packages
